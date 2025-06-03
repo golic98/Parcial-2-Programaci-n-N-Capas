@@ -1,0 +1,251 @@
+type: collection.insomnia.rest/5.0
+name: Parcial_02_PNC
+meta:
+  id: wrk_7a034c9c7c9c413bb064aff335ad9fea
+  created: 1748924092000
+  modified: 1748924092000
+collection:
+  - url: http://localhost:8080/books?author=Stephen King
+    name: Author
+    meta:
+      id: req_704c4920ce3642e9a32372ad522db222
+      created: 1748924108895
+      modified: 1748927858613
+      isPrivate: false
+      sortKey: -1748924108895
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/books?language=English
+    name: Language
+    meta:
+      id: req_b545bbff430c42a999f26c145e59b91a
+      created: 1748924175647
+      modified: 1748925586220
+      isPrivate: false
+      sortKey: -1748924108795
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/book?genre=Mystery
+    name: Genre
+    meta:
+      id: req_e7c8995cd79b4fc299398a199b62f60e
+      created: 1748924280368
+      modified: 1748927792886
+      isPrivate: false
+      sortKey: -1748924280368
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/books?minPages=100&maxPages=300
+    name: Pages
+    meta:
+      id: req_2b2f6b96448c4028ba9e00a24d8bab29
+      created: 1748924343283
+      modified: 1748927772751
+      isPrivate: false
+      sortKey: -1748924343283
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/books/registerBook
+    name: New Book 1
+    meta:
+      id: req_f0245f5b4d024647945bf6bc21053aa0
+      created: 1748924372780
+      modified: 1748927501729
+      isPrivate: false
+      sortKey: -1748924372780
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "title": "It",
+          "author": "Stephen King",
+          "isbn": "978-0-670-81302-5",
+          "publicationYear": 1986,
+          "language": "English",
+          "pages": 1138,
+          "genre": "Horror"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_cb854191769341c68c88eec0ba506a85
+      - name: User-Agent
+        value: insomnia/11.0.2
+        id: pair_5e69166ba7ab40bcb5d386e3adcf717e
+        disabled: true
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/books/978-0-385-12167-5
+    name: By ISBN
+    meta:
+      id: req_456e11fa412d44a7a3e6cbae7d838bda
+      created: 1748924703528
+      modified: 1748928107859
+      isPrivate: false
+      sortKey: -1748924703528
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/books/978-0-670-81302-5
+    name: Update Book
+    meta:
+      id: req_c84a15442d834bf3b928ff81cd5604c6
+      created: 1748925593781
+      modified: 1748925889810
+      isPrivate: false
+      sortKey: -1748925593781
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "title": "It (pocket novel)",
+          "author": "Stephen King",
+          "isbn": "978-0-670-81302-5",
+          "publicationYear": 1986,
+          "language": "English",
+          "pages": 1140,
+          "genre": "Horror"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_91c591e5dc2a46d68bc5bd79708eab75
+      - name: User-Agent
+        value: insomnia/11.0.2
+        id: pair_ca8ca4a1971640459949a120a9951b82
+        disabled: true
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/books
+    name: All Books
+    meta:
+      id: req_20de12fd6a614fcfa96a28681ca08a41
+      created: 1748925977933
+      modified: 1748926055612
+      isPrivate: false
+      sortKey: -1748925977933
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/books/registerBook
+    name: New Book 2
+    meta:
+      id: req_4ad1ea8458184a89893bc088f7a18ddc
+      created: 1748927475014
+      modified: 1748928395581
+      isPrivate: false
+      sortKey: -1748924358031.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "100 años de soledad",
+        	"author": "Gabriel García Márquez",
+        	"isbn": "978-0-385-12167-5",
+        	"publicationYear": 1967,
+        	"language": "Español",
+        	"pages": 659,
+        	"genre": "Novela"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_cb854191769341c68c88eec0ba506a85
+      - name: User-Agent
+        value: insomnia/11.0.2
+        id: pair_5e69166ba7ab40bcb5d386e3adcf717e
+        disabled: true
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99204488d0873c49b4aa5be1be861b4a546465bc
+    created: 1748924092015
+    modified: 1748924092015
+environments:
+  name: Base Environment
+  meta:
+    id: env_99204488d0873c49b4aa5be1be861b4a546465bc
+    created: 1748924092007
+    modified: 1748924092007
+    isPrivate: false
