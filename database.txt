@@ -1,0 +1,12 @@
+create table "books"(
+	id serial primary key,
+	title varchar(30),
+	author varchar(30),
+	isbn varchar(30),
+	publicationYear int,
+	language varchar(30),
+	pages int,
+	genre varchar(30)
+);
+
+select * from "books";
